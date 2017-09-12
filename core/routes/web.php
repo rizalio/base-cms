@@ -14,15 +14,8 @@
 Route::group(['middleware' => 'language'], function(){
 
 	Route::get('/', ['as' => 'frontend.home', 'uses' =>'Frontend\HomeFrontendController@index']);
-	Route::get('product/{type}',['as' => 'frontend.product', 'uses' => 'Frontend\HomeFrontendController@product']);
-	Route::get('service',['as' => 'frontend.service', 'uses' => 'Frontend\HomeFrontendController@service']);
-	Route::get('about',['as' => 'frontend.about', 'uses' => 'Frontend\HomeFrontendController@about']);
 	Route::get('news',['as' => 'frontend.news', 'uses' => 'Frontend\HomeFrontendController@news']);
 	Route::get('single/{slug}',['as' => 'frontend.single', 'uses' => 'Frontend\HomeFrontendController@single']);
-	Route::get('contact',['as' => 'frontend.contact', 'uses' => 'Frontend\HomeFrontendController@contact']);
-	Route::get('search',['as' => 'frontend.search', 'uses' => 'Frontend\HomeFrontendController@search']);
-	Route::get('product-details/{slug}', ['as' => 'product.slug', 'uses' => 'RangeProductController@withSlug']);
-
 	Route::get('locale/{id}', ['as'=>'switchlang','uses' => 'Frontend\LanguageController@switchLang']);;
 
 	Auth::routes();
@@ -44,18 +37,18 @@ Route::group(['middleware' => 'language'], function(){
 	});
 
 
-		Route::get('media/images/{filename}', function ($filename) {
-			return to_image(storage_path() . '/media/images/' . $filename);
-		});
+	Route::get('media/images/{filename}', function ($filename) {
+		return to_image(storage_path() . '/media/images/' . $filename);
+	});
 
 
-		Route::get('media/images/shares/{filename}', function ($filename) {
-			return to_image(storage_path() . '/media/images/shares/' . $filename);
-		});
+	Route::get('media/images/shares/{filename}', function ($filename) {
+		return to_image(storage_path() . '/media/images/shares/' . $filename);
+	});
 
-		Route::get('media/images/shares/thumbs/{filename}', function ($filename) {
-			return to_image(storage_path() . '/media/images/shares/thumbs/' . $filename);
-		});
+	Route::get('media/images/shares/thumbs/{filename}', function ($filename) {
+		return to_image(storage_path() . '/media/images/shares/thumbs/' . $filename);
+	});
 
 	Route::group(['middleware' => 'auth', 'prefix' => config('app.backend')], function() {
 		Route::get('/', function(){
