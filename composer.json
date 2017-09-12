@@ -1,0 +1,14 @@
+{
+    "name": "rizalio/base-cms",
+    "description": "The base CMS For Our projects.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rizalio",
+            "email": "rizalfakhri12@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

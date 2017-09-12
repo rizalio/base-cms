@@ -1,0 +1,31 @@
+$colors: (
+	primary: #80b53f,
+	topbar: #000,
+	topbar_item_color: #fff,
+	topbar_item_background: #828282,
+	topbar_item_selected: #80b53f,
+	navbar: rgba(0,0,0,.8),
+	navbar_item: #aaaaaa,
+	navbar_item_background: transparent,
+	navbar_item_selected: #80b53f,
+	secondary_bar: rgba(0,0,0, .8),
+	secondary_bar_trp: rgba(0,0,0, .6),
+	slider_dot: #ddd,
+	slider_dot_selected: #80b53f,
+	line_color: #80b53f,
+	footer: #000
+);
+
+$size: (
+	slider_height: 520px,
+	slider_height_tablet: 310px,
+	slider_height_mobile: 153px
+);
+
+@function color($key) {
+	@return map-get($colors, $key);
+}
+
+@function size($key) {
+	@return map-get($size, $key);
+}
