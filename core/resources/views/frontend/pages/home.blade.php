@@ -5,6 +5,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h1 class="text-center" style="color: #A569BD">You've Been Arrived!</h1>
+					<marquee>Ini Tulisan Jalan, Keren kan?</marquee>
 				</div>
 			</div>
 		</div>
